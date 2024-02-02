@@ -17,8 +17,8 @@ class MainBanner extends StatelessWidget {
         padding: const EdgeInsets.all(defaultPadding * 2),
         decoration: const BoxDecoration(
           image: DecorationImage(
-              image: AssetImage(bgImg), fit: BoxFit.cover, opacity: 0.8),
-          color: blackColor,
+              image: AssetImage(bgImg), fit: BoxFit.cover, opacity: 0.35),
+          color: darkColor,
         ),
         child: bannerContent(context),
       ),
