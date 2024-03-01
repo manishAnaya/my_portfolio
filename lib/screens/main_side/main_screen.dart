@@ -1,3 +1,4 @@
+import 'package:feedback/feedback.dart';
 import 'package:manish_portfolio/constants/exports.dart';
 import 'package:manish_portfolio/responsive.dart';
 import 'package:manish_portfolio/screens/main_side/main_side.dart';
@@ -35,6 +36,17 @@ class MainScreeen extends StatelessWidget {
             ),
           ),
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: const Icon(Icons.feedback),
+        onPressed: () => BetterFeedback.of(context).show(
+            (UserFeedback feedback) =>
+                ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(
+                    content: Text(
+                        'Feedback submitted successfully, Thanks for your feedback...'),
+                  ),
+                )),
       ),
     );
   }

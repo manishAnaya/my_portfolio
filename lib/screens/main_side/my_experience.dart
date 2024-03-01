@@ -13,26 +13,26 @@ class MyExperience extends StatelessWidget {
         children: [
           Text('Experience',
               style: Responsive.isLargeMobile(context)
-                  ? normalWhiteText
+                  ? mediumWhiteText
                   : xLargeWhiteText),
           const SizedBox(height: defaultPadding * 2),
           Responsive.isMobile(context)
               ? Column(
                   children: [
-                    buildElectricalExp(context),
-                    const SizedBox(height: defaultPadding * 2),
                     buildFlutterExp(context),
+                    const SizedBox(height: defaultPadding * 2),
+                    buildElectricalExp(context),
                   ],
                 )
               : IntrinsicHeight(
                   child: Row(
                     children: [
                       Expanded(
-                        child: buildElectricalExp(context),
+                        child: buildFlutterExp(context),
                       ),
                       const SizedBox(width: defaultPadding * 2),
                       Expanded(
-                        child: buildFlutterExp(context),
+                        child: buildElectricalExp(context),
                       ),
                     ],
                   ),
@@ -79,7 +79,7 @@ class MyExperience extends StatelessWidget {
           Text('Achievements/Tasks', style: mediumWhiteText),
           const SizedBox(height: 4),
           Text(
-            '- Collaborated across technical and design teams toproduce innovative software applications.\n- Kept detailed records of releases and software fixesfor optimum traceability.\n- Detailed and evaluated requirements for softwareapplications and operating systems.\n- Working with Flutter for App development from GetXlibrary om more than 10 Projects.\n- Understanding the requirements and Functionalspecification.\n- Knowledge of Dart programming language, RestAPIs and integration of various APIs from thirdparties.',
+            '- Collaborated across technical and design teams to produce innovative software applications.\n- Kept detailed records of releases and software fixesfor optimum traceability.\n- Detailed and evaluated requirements for softwareapplications and operating systems.\n- Working with Flutter for App development from GetXlibrary om more than 10 Projects.\n- Understanding the requirements and Functionalspecification.\n- Knowledge of Dart programming language, RestAPIs and integration of various APIs from thirdparties.',
             style: Responsive.isLargeMobile(context)
                 ? normalLightText
                 : Responsive.isMobile(context)
@@ -99,16 +99,16 @@ class MyExperience extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            'Electrical Engineer',
+            'Junior Flutter Developer',
             style: Responsive.isLargeMobile(context)
                 ? mediumWhiteText
                 : largeWhiteText,
           ),
           const SizedBox(height: 4),
-          Text('Obra Thermal Power Plant, SWPE ', style: mediumWhiteText),
+          Text('iBigDo Technologies', style: mediumWhiteText),
           const SizedBox(height: 4),
           Text(
-            '05/2017 - 03/2022, Obra, Sonbhadra',
+            '12/2018 - 05/2022, Obra, Sonbhadra',
             style: Responsive.isLargeMobile(context)
                 ? normalLightText
                 : Responsive.isMobile(context)
@@ -117,7 +117,7 @@ class MyExperience extends StatelessWidget {
           ),
           const SizedBox(height: 4),
           Text(
-            'Sunworld is a dynamic and innovative company that operates in the field of industrial automation and control systems. the company has carved a niche for itself in providing cutting-edge solutions for maintenance and repair of electrical products and systems.',
+            'IBigDo Technologies has proudly delivered five years of exceptional service, specializing in crafting tailored mobility solutions, including branding, logo design, packaging, catalogue design, and outdoor branding.',
             style: Responsive.isLargeMobile(context)
                 ? normalLightText
                 : Responsive.isMobile(context)
@@ -128,7 +128,7 @@ class MyExperience extends StatelessWidget {
           Text('Achievements/Tasks', style: mediumWhiteText),
           const SizedBox(height: 4),
           Text(
-            '- Performed maintenance procedure.\n- Repairing of existing electrical products and systemlike Control valves and Transmitter. \n- Working on DCS (Distributed Control Panels).\n- Proactive approach to minimizing operational risks associated with electrical maintenance activities.\n -In-depth understanding of control panels and their role in optimizing industrial processes.\n- Specialized in the repair of control valves and transmitters, showcasing hands-on technical skills.',
+            "Project Setup: Setting up Flutter projects with the appropriate dependencies, project structure, and version control to kickstart development.\nUI/UX Design Implementation: Translating design mockups into functional user interfaces, ensuring responsiveness across various screen sizes and devices.\nState Management: Implementing effective state management solutions (such as Provider) to manage the application's state and data flow efficiently.\nAPI Integration: Connecting the application to backend services and APIs, handling data retrieval, and ensuring proper error handling and data caching.",
             style: Responsive.isLargeMobile(context)
                 ? normalLightText
                 : Responsive.isMobile(context)

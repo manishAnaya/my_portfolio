@@ -18,7 +18,14 @@ class MyInfo extends StatelessWidget {
             ),
             const SizedBox(height: 8),
             Text('Manish Agrahari', style: normalWhiteText),
-            Text('Flutter Developer', style: smallWhiteText),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 12.0),
+              child: Text(
+                'Senior Flutter Developer | 5+ Years of Cross-Platform Expertise in Crafting High-Performance Mobile Applications',
+                style: smallWhiteText,
+                textAlign: TextAlign.center,
+              ),
+            ),
             Text('+91 7007033600', style: smallWhiteText),
           ],
         ),

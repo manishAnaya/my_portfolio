@@ -1,7 +1,10 @@
+import 'package:feedback/feedback.dart';
 import 'package:manish_portfolio/Constants/exports.dart';
 import 'package:manish_portfolio/screens/splash_screen.dart';
 
-void main() => runApp(const MyApp());
+void main() {
+  runApp(const BetterFeedback(child: MyApp()));
+}
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});

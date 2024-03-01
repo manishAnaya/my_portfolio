@@ -1,6 +1,7 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:manish_portfolio/constants/exports.dart';
 import 'package:manish_portfolio/responsive.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class MainBanner extends StatelessWidget {
   const MainBanner({super.key});
@@ -52,7 +53,7 @@ class MainBanner extends StatelessWidget {
         ),
         const SizedBox(height: 8),
         Text(
-            'Highly skilled Flutter developer with 1.5 years of experience in mobile app development. Proficient in GetX statemanagement,\ndedicated to creating intuitive and high-performance applications',
+            'Highly skilled Flutter developer with 5+ years of experience in mobile App development. Proficient in GetX statemanagement,\ndedicated to creating intuitive and high-performance applications',
             style: Responsive.isMobile(context)
                 ? smallWhiteText
                 : normalWhiteText),
@@ -83,9 +84,10 @@ class MainBanner extends StatelessWidget {
                 style: TextButton.styleFrom(
                   backgroundColor: primaryColor,
                 ),
-                onPressed: () {},
+                onPressed: () =>
+                    launchUrl(Uri.parse('https://wa.me/7007033600?text=' '')),
                 child: Text(
-                  'Explore Now',
+                  'Contact me',
                   style: Responsive.isMobile(context)
                       ? smallWhiteText
                       : normalWhiteText,

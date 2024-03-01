@@ -1,6 +1,7 @@
 import 'package:manish_portfolio/Constants/exports.dart';
 import 'package:manish_portfolio/models/project.dart';
 import 'package:manish_portfolio/responsive.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class MyProjects extends StatelessWidget {
   const MyProjects({super.key});
@@ -14,7 +15,7 @@ class MyProjects extends StatelessWidget {
           padding: const EdgeInsets.symmetric(vertical: 12.0),
           child: Text('My Projects',
               style: Responsive.isLargeMobile(context)
-                  ? normalWhiteText
+                  ? mediumWhiteText
                   : xLargeWhiteText),
         ),
         GridView.builder(
@@ -30,7 +31,7 @@ class MyProjects extends StatelessWidget {
                 : Responsive.isSmallMobile(context)
                     ? 2
                     : Responsive.isMobile(context)
-                        ? 3
+                        ? 3.25
                         : 1.25,
           ),
           itemBuilder: (context, index) => Container(
@@ -49,7 +50,7 @@ class MyProjects extends StatelessWidget {
                       : Responsive.isMobile(context)
                           ? normalWhiteText
                           : largeWhiteText,
-                  maxLines: Responsive.isLargeMobile(context) ? 1 : 2,
+                  maxLines: Responsive.isLargeMobile(context) ? 2 : 2,
                   overflow: TextOverflow.ellipsis,
                 ),
                 Text(
@@ -59,7 +60,7 @@ class MyProjects extends StatelessWidget {
                       : Responsive.isMobile(context)
                           ? smallLightText
                           : mediumLightText,
-                  maxLines: Responsive.isLargeMobile(context) ? 3 : 5,
+                  maxLines: Responsive.isLargeMobile(context) ? 4 : 5,
                   overflow: TextOverflow.ellipsis,
                 ),
                 Row(
@@ -68,6 +69,8 @@ class MyProjects extends StatelessWidget {
                     TextButton.icon(
                       style: TextButton.styleFrom(
                         padding: EdgeInsets.zero,
+                        visualDensity: VisualDensity.compact,
+                        tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                       ),
                       onPressed: () => showDialog(
                         context: context,
@@ -81,7 +84,8 @@ class MyProjects extends StatelessWidget {
                               Text(myProjects[index].description,
                                   style: mediumLightText),
                               TextButton.icon(
-                                onPressed: () {},
+                                onPressed: () => launchUrl(
+                                    Uri.parse(myProjects[index].link)),
                                 icon: const Icon(FontAwesomeIcons.googlePlay,
                                     size: 16),
                                 label: Text(
@@ -117,7 +121,8 @@ class MyProjects extends StatelessWidget {
                     Responsive.isLargeMobile(context)
                         ? Container()
                         : TextButton.icon(
-                            onPressed: () {},
+                            onPressed: () =>
+                                launchUrl(Uri.parse(myProjects[index].link)),
                             icon: const Icon(FontAwesomeIcons.googlePlay,
                                 size: 16),
                             label: Text(
